@@ -1,0 +1,17 @@
+*
+     * Most editors support two different operation when accepting a completion item. One is to insert a
+     * completion text and the other is to replace an existing text with a completion text. Since this can
+     * usually not predetermined by a server it can report both ranges. Clients need to signal support for
+     * `InsertReplaceEdits` via the `textDocument.completion.insertReplaceSupport` client capability
+     * property.
+     *
+     * *Note 1:* The text edit's range as well as both ranges from a insert replace edit must be a
+     * [single line] and they must contain the position at which completion has been requested.
+     * *Note 2:* If an `InsertReplaceEdit` is returned the edit's insert range must be a prefix of
+     * the edit's replace range, that means it must be contained and starting at the same position.
+     *
+     * @since 3.16.0 additional type `InsertReplaceEdit`
+     */
+————————————————
+版权声明：本文为CSDN博主「Mino.66」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/luoluoyang23/article/details/124543453
